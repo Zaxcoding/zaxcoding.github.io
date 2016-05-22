@@ -1,2 +1,0 @@
-# zaxcoding.github.io
-Blog
