@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title><![CDATA[Category: til | Zach Sadler]]></title>
+    <link href="http://zaxcoding.github.io/blog/categories/til/atom.xml" rel="self"/>
+    <link href="http://zaxcoding.github.io/"/>
+    <updated>2016-05-22T12:52:12-04:00</updated>
+    <id>http://zaxcoding.github.io/</id>
+    <author>
+        <name><![CDATA[Zach Sadler]]></name>
+        
+      </author>
+    <generator uri="http://octopress.org/">Octopress</generator>
+
+    
+    <entry>
+        <title type="html"><![CDATA[Truncating SQL DateTime in SQL Server 2008]]></title>
+        <link href="http://zaxcoding.github.io/blog/2016/05/22/truncating-sql-datetime-in-sql-server-2008/"/>
+        <updated>2016-05-22T12:40:08-04:00</updated>
+        <id>http://zaxcoding.github.io/blog/2016/05/22/truncating-sql-datetime-in-sql-server-2008</id>
+        <content type="html"><![CDATA[<p>Recently a coworker was writing a T-SQL script to compare ten-minute timeslices against each other. He was trying to figure out an easy, performant way to remove the ones place so that he could treat all timeslices from 01:00.00 to 01:09.99 as the same datetime, and so on. I found a few StackOverflow resources like <a href="http://stackoverflow.com/questions/8896663/a-way-to-extract-from-a-datetime-value-data-without-seconds">this one</a> but none that did exactly what I wanted. I adapted those with some trial and error into this:</p>
+
+<p>{% codeblock Ten Minute Time Slices - TIL.sql %}
+DECLARE @testDate DATETIME = &lsquo;2016-05-13 12:57:21.097&rsquo;</p>
+
+<p>select dateadd(minute, (datepart(minute, @testdate) / 10) * 10, dateadd(hour, datediff(hour, 0, @testDate), 0)),
+       dateadd(minute, (datepart(minute, @testdate) / 10) * 10 + 10, dateadd(hour, datediff(hour, 0, @testDate), 0))
+{% endcodeblock %}</p>
+]]></content>
+    </entry>
+    
+</feed>
