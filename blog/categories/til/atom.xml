@@ -4,7 +4,7 @@
     <title><![CDATA[Category: til | Zach Sadler]]></title>
     <link href="http://zaxcoding.github.io/blog/categories/til/atom.xml" rel="self"/>
     <link href="http://zaxcoding.github.io/"/>
-    <updated>2016-05-22T12:56:35-04:00</updated>
+    <updated>2016-05-22T13:02:31-04:00</updated>
     <id>http://zaxcoding.github.io/</id>
     <author>
         <name><![CDATA[Zach Sadler]]></name>
@@ -18,7 +18,8 @@
         <link href="http://zaxcoding.github.io/blog/2016/05/22/truncating-sql-datetime-in-sql-server-2008/"/>
         <updated>2016-05-22T12:40:08-04:00</updated>
         <id>http://zaxcoding.github.io/blog/2016/05/22/truncating-sql-datetime-in-sql-server-2008</id>
-        <content type="html"><![CDATA[<p>Recently a coworker was writing a T-SQL script to compare ten-minute timeslices against each other. He was trying to figure out an easy, performant way to remove the ones place so that he could treat all timeslices from 01:00.00 to 01:09.99 as the same datetime, and so on. I found a few StackOverflow resources like <a href="http://stackoverflow.com/questions/8896663/a-way-to-extract-from-a-datetime-value-data-without-seconds">this one</a> but none that did exactly what I wanted. I adapted those with some trial and error into this:</p>
+        <content type="html"><![CDATA[<p>Recently a coworker was writing a T-SQL script to compare ten-minute timeslices against each other. He was trying to figure out an easy, performant way to remove the ones place so that he could treat all timeslices from 01:00.00 to 01:09.99 as the same datetime, and so on. I found a few StackOverflow resources like <a href="http://stackoverflow.com/questions/8896663/a-way-to-extract-from-a-datetime-value-data-without-seconds">this one</a> but none that did exactly what I wanted. I adapted those with some trial and error into this:
+<--more--></p>
 
 <p><figure class='code'><figcaption><span>Ten Minute Time Slices - TIL.sql </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
