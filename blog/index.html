@@ -123,21 +123,12 @@
 
 
 
-    <p>Recently a coworker was writing a T-SQL script to compare ten-minute timeslices against each other. He was trying to figure out an easy, performant way to remove the ones place so that he could treat all timeslices from 01:00.00 to 01:09.99 as the same datetime, and so on. I found a few StackOverflow resources like <a href="http://stackoverflow.com/questions/8896663/a-way-to-extract-from-a-datetime-value-data-without-seconds">this one</a> but none that did exactly what I wanted. I adapted those with some trial and error into this:
-<--more--></p>
-
-<figure class='code'><figcaption><span>Ten Minute Time Slices - TIL.sql </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">DECLARE</span> <span class="o">@</span><span class="n">testDate</span> <span class="n">DATETIME</span> <span class="o">=</span> <span class="s1">&#39;2016-05-13 12:57:21.097&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">select</span> <span class="n">dateadd</span><span class="p">(</span><span class="k">minute</span><span class="p">,</span> <span class="p">(</span><span class="n">datepart</span><span class="p">(</span><span class="k">minute</span><span class="p">,</span> <span class="o">@</span><span class="n">testdate</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dateadd</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">datediff</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">@</span><span class="n">testDate</span><span class="p">),</span> <span class="mi">0</span><span class="p">)),</span>
-</span><span class='line'>     <span class="n">dateadd</span><span class="p">(</span><span class="k">minute</span><span class="p">,</span> <span class="p">(</span><span class="n">datepart</span><span class="p">(</span><span class="k">minute</span><span class="p">,</span> <span class="o">@</span><span class="n">testdate</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dateadd</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">datediff</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">@</span><span class="n">testDate</span><span class="p">),</span> <span class="mi">0</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure>
+    <div class="article__content clearfix">
+        <p>Recently a coworker was writing a T-SQL script to compare ten-minute timeslices against each other. He was trying to figure out an easy, performant way to remove the ones place so that he could treat all timeslices from 01:00.00 to 01:09.99 as the same datetime, and so on. I found a few StackOverflow resources like <a href="http://stackoverflow.com/questions/8896663/a-way-to-extract-from-a-datetime-value-data-without-seconds">this one</a> but none that did exactly what I wanted. I adapted those with some trial and error into this:</p>
 
 
+        <a class="btn pull-right" href="/blog/2016/05/22/truncating-sql-datetime-in-sql-server-2008/">Read on &rarr;</a>
+    </div>
 
 
         </article>
