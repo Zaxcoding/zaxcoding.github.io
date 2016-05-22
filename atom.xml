@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title><![CDATA[Zach Sadler]]></title>
+    <link href="http://zaxcoding.github.io/atom.xml" rel="self"/>
+    <link href="http://zaxcoding.github.io/"/>
+    <updated>2016-05-22T12:56:35-04:00</updated>
+    <id>http://zaxcoding.github.io/</id>
+    <author>
+        <name><![CDATA[Zach Sadler]]></name>
+        
+    </author>
+    <generator uri="http://octopress.org/">Octopress</generator>
+
+    
+    <entry>
+        <title type="html"><![CDATA[Truncating SQL DateTime in SQL Server 2008]]></title>
+        <link href="http://zaxcoding.github.io/blog/2016/05/22/truncating-sql-datetime-in-sql-server-2008/"/>
+        <updated>2016-05-22T12:40:08-04:00</updated>
+        <id>http://zaxcoding.github.io/blog/2016/05/22/truncating-sql-datetime-in-sql-server-2008</id>
+        <content type="html"><![CDATA[<p>Recently a coworker was writing a T-SQL script to compare ten-minute timeslices against each other. He was trying to figure out an easy, performant way to remove the ones place so that he could treat all timeslices from 01:00.00 to 01:09.99 as the same datetime, and so on. I found a few StackOverflow resources like <a href="http://stackoverflow.com/questions/8896663/a-way-to-extract-from-a-datetime-value-data-without-seconds">this one</a> but none that did exactly what I wanted. I adapted those with some trial and error into this:</p>
+
+<figure class='code'><figcaption><span>Ten Minute Time Slices - TIL.sql </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">DECLARE</span> <span class="o">@</span><span class="n">testDate</span> <span class="n">DATETIME</span> <span class="o">=</span> <span class="s1">&#39;2016-05-13 12:57:21.097&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">select</span> <span class="n">dateadd</span><span class="p">(</span><span class="k">minute</span><span class="p">,</span> <span class="p">(</span><span class="n">datepart</span><span class="p">(</span><span class="k">minute</span><span class="p">,</span> <span class="o">@</span><span class="n">testdate</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dateadd</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">datediff</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">@</span><span class="n">testDate</span><span class="p">),</span> <span class="mi">0</span><span class="p">)),</span>
+</span><span class='line'>     <span class="n">dateadd</span><span class="p">(</span><span class="k">minute</span><span class="p">,</span> <span class="p">(</span><span class="n">datepart</span><span class="p">(</span><span class="k">minute</span><span class="p">,</span> <span class="o">@</span><span class="n">testdate</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dateadd</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">datediff</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">@</span><span class="n">testDate</span><span class="p">),</span> <span class="mi">0</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+    </entry>
+    
+    <entry>
+        <title type="html"><![CDATA[Super test yeah]]></title>
+        <link href="http://zaxcoding.github.io/blog/2016/05/19/super-test-yeah/"/>
+        <updated>2016-05-19T18:43:48-04:00</updated>
+        <id>http://zaxcoding.github.io/blog/2016/05/19/super-test-yeah</id>
+        <content type="html"><![CDATA[<p>fghfghfghghf</p>
+]]></content>
+    </entry>
+    
+</feed>
