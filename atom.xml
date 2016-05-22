@@ -4,7 +4,7 @@
     <title><![CDATA[Zach Sadler]]></title>
     <link href="http://zaxcoding.github.io/atom.xml" rel="self"/>
     <link href="http://zaxcoding.github.io/"/>
-    <updated>2016-05-22T13:45:13-04:00</updated>
+    <updated>2016-05-22T13:56:09-04:00</updated>
     <id>http://zaxcoding.github.io/</id>
     <author>
         <name><![CDATA[Zach Sadler]]></name>
@@ -36,15 +36,6 @@
 </span><span class='line'>     <span class="n">dateadd</span><span class="p">(</span><span class="k">minute</span><span class="p">,</span> <span class="p">(</span><span class="n">datepart</span><span class="p">(</span><span class="k">minute</span><span class="p">,</span> <span class="o">@</span><span class="n">testdate</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dateadd</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">datediff</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">@</span><span class="n">testDate</span><span class="p">),</span> <span class="mi">0</span><span class="p">))</span>
 </span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-    </entry>
-    
-    <entry>
-        <title type="html"><![CDATA[Super test yeah]]></title>
-        <link href="http://zaxcoding.github.io/blog/2016/05/19/super-test-yeah/"/>
-        <updated>2016-05-19T18:43:48-04:00</updated>
-        <id>http://zaxcoding.github.io/blog/2016/05/19/super-test-yeah</id>
-        <content type="html"><![CDATA[<p>fghfghfghghf</p>
 ]]></content>
     </entry>
     
