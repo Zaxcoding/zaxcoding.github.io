@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title><![CDATA[Category: small projects | Zach Sadler]]></title>
+    <link href="http://zaxcoding.github.io/blog/categories/small-projects/atom.xml" rel="self"/>
+    <link href="http://zaxcoding.github.io/"/>
+    <updated>2016-06-26T14:35:21-04:00</updated>
+    <id>http://zaxcoding.github.io/</id>
+    <author>
+        <name><![CDATA[Zach Sadler]]></name>
+        
+      </author>
+    <generator uri="http://octopress.org/">Octopress</generator>
+
+    
+    <entry>
+        <title type="html"><![CDATA[Scripting to the top of Hearthpwn Leaderboards]]></title>
+        <link href="http://zaxcoding.github.io/blog/2016/06/26/scripting-to-the-top-of-hearthpwn-leaderboards/"/>
+        <updated>2016-06-26T14:19:02-04:00</updated>
+        <id>http://zaxcoding.github.io/blog/2016/06/26/scripting-to-the-top-of-hearthpwn-leaderboards</id>
+        <content type="html"><![CDATA[<p><a href="http://www.hearthpwn.com">Hearthpwn</a> is a community Hearthstone site where most people go to find the latest decks to try their hand at making legend for the season.</p>
+
+<p>Another feature on the site is the Hearth Pack Simulator, a fun little &lsquo;game&rsquo; where you can try your luck at opening a random pack of Hearthstone cards. There are 8 different rarities to Hearthstone cards: common, rare, epic, and legendary (and golden variants of each), and each one gives a different &lsquo;score&rsquo; on the Hearth Pack Simulator. Tens of millions of packs have been opened on the site and there is a leaderboard that keeps track of the daily/weekly/etc best packs opened. I decided I wanted to make it to the top of the leaderboard.</p>
+
+<p>Did I make it to the top?</p>
+
+<!-- more -->
+
+
+<p><img class="left" src="/images/hearthpwn-leaderboard.png" title="&lsquo;Yes, I did&rsquo; &lsquo;images&rsquo;" ></p>
+]]></content>
+    </entry>
+    
+</feed>
